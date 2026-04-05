@@ -1,0 +1,14 @@
+project_id: my_project
+project_name: My Python Project
+root_path: .
+output_dir: ./codeatlas_output
+supported_languages:
+  - python
+schema_version: "1.0.0"
+log_level: INFO
+analyzer_config:
+  use_jedi: true
+  use_astroid: true
+  use_grimp: true
+  use_pyan: false
+  max_file_size_bytes: 1000000

@@ -1,0 +1,8 @@
+pydantic>=2.0
+pyyaml>=6.0
+jedi>=0.19
+astroid>=3.0
+grimp>=3.3
+click>=8.0
+pytest>=7.0
+pytest-cov>=4.0
