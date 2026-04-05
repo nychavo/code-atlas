@@ -21,5 +21,9 @@ def truncate(text: str, max_length: int = MAX_NAME_LENGTH) -> str:
 
 
 def hash_value(value: str) -> str:
-    """Return a SHA-256 hex digest of *value* (demo utility — not for security-sensitive use)."""
+    """Return a SHA-256 hex digest of *value*.
+
+    Suitable for generating content identifiers or checksums.
+    Not suitable for security-sensitive hashing (e.g., passwords).
+    """
     return hashlib.sha256(value.encode()).hexdigest()
