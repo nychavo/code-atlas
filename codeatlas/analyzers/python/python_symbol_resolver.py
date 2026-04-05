@@ -57,7 +57,12 @@ class PythonSymbolResolver(BaseSymbolResolver):
         try:
             import jedi
 
-            jedi.Script(path=str(file_path), project=jedi.Project(path=str(self.root_path)))
+            project = jedi.Project(path=str(self.root_path))
+            source = file_path.read_text(encoding="utf-8", errors="replace")
+            script = jedi.Script(source=source, path=str(file_path), project=project)
+            completions = script.complete(1, len(name))
+            if completions:
+                return completions[0].full_name or None
             return None
         except Exception as exc:
             self.logger.debug("Jedi resolution failed for %r: %s", name, exc)

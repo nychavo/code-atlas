@@ -20,6 +20,6 @@ def truncate(text: str, max_length: int = MAX_NAME_LENGTH) -> str:
     return text[: max_length - 1] + "…"
 
 
-def hash_password(password: str) -> str:
-    """Return a SHA-256 hex digest of *password* (demo only — not for production)."""
-    return hashlib.sha256(password.encode()).hexdigest()
+def hash_value(value: str) -> str:
+    """Return a SHA-256 hex digest of *value* (demo utility — not for security-sensitive use)."""
+    return hashlib.sha256(value.encode()).hexdigest()
