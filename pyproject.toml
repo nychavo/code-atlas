@@ -24,6 +24,7 @@ dev = [
 
 [project.scripts]
 codeatlas = "codeatlas.app.runner:main"
+codeatlas-select = "codeatlas.app.project_selector:main"
 
 [tool.setuptools.packages.find]
 include = ["codeatlas*"]
